@@ -1,0 +1,199 @@
+$light-brown: #db5b00;
+$dark-borwn: #612800;
+$dark-color: #202124;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+//Utility Start
+
+.container {
+  width: 80%;
+  display: block;
+  margin: 0px auto;
+}
+
+.info-and-picture {
+  display: grid;
+  grid-template-columns: repeat(2, 6fr);
+  column-gap: 50px;
+
+  .info {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .picture {
+    .img-container {
+      border: 2px solid $dark-borwn;
+      width: 450px;
+      height: 450px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+//Utility End
+
+//Navbar Start
+.logo {
+  text-transform: uppercase;
+  font-family: 'Petit Formal Script', cursive;
+  text-align: left;
+  color: $light-brown;
+}
+
+nav {
+  display: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 10%;
+  position: relative;
+  background: transparent;
+  z-index: 100;
+}
+
+.navlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0px auto auto;
+  float: right;
+}
+
+.nav-item {
+  list-style: none;
+  margin: 0px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+//Navbar End
+
+//Header Start
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./imgs/header-img-1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.header-content {
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+
+  h2 {
+    max-width: fit-content;
+    padding: 0px !important;
+    color: $light-brown;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  p {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    width: 35%;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .cta {
+    background: $dark-borwn;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+//Header End
+
+//Section Start
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+
+  &#comfort {
+    padding-top: 30px;
+    min-height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('./imgs/comfort-photo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    p {
+      text-align: center;
+      color: #fff;
+      padding: 0px 25%;
+      font-family: 'Poppins', sans-serif;
+      font-weight: lighter;
+      font-size: 14px;
+    }
+  }
+}
+
+.section-heading-style-1 {
+  position: absolute;
+  width: fit-content;
+  font-family: 'Poppins', sans-serif;
+  color: $light-brown;
+  text-transform: uppercase;
+  &.about-us {
+    letter-spacing: 30px;
+    top: 50%;
+    left: -100px;
+    transform: rotate(-90deg) translateY(-50%);
+  }
+  &.our-services {
+    letter-spacing: 20px;
+    top: 50%;
+    right: -100px;
+    transform: rotate(90deg) translateY(-50%);
+  }
+}
+
+.section-heading-style-2 {
+  text-align: center;
+  margin: 30px 0px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  color: $light-brown;
+}
+
+//Section End
